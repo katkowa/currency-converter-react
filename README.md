@@ -1,4 +1,14 @@
+# Currency Converter
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
+[Show in the browser](https://katkowa.github.io/currency-converter/)
+## How to use it
+1. Enter amount of money you want to exchange
+2. Choose one of the available currency
+3. Click "calculate" button
+4. Enjoy the result!
+
+![Converter visualization](https://i.ibb.co/r0KPyqX/demo.png)
 
 ## Available Scripts
 
@@ -11,11 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
