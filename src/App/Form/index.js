@@ -1,31 +1,15 @@
 import React, { useState } from "react";
+import { currencies } from "../currencies";
+import Result from "./Result";
 import "./style.css";
 
-const Form = () => {
+const Form = ({result, calculateResult}) => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState("EUR");
-    const [result, setResult] = useState("");
-
-    const getCurrencyRate = (currency) => {
-        switch (currency) {
-            case "EUR":
-                return 4.4524;
-            case "USD":
-                return 3.9667;
-            case "GBP":
-                return 4.9293;
-            case "KRW":
-                return 0.003269;
-        }
-    };
-
-    const calculateResult = (amount, currency) => {
-        return amount / getCurrencyRate(currency);
-    };
+    const [currency, setCurrency] = useState(currencies[0].id);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        setResult(calculateResult(amount, currency));
+        calculateResult(amount, currency);
     }
 
     return (
@@ -55,10 +39,13 @@ const Form = () => {
                                 onChange={({ target }) => setCurrency(target.value)}
                                 className="form__field"
                             >
-                                <option value="EUR">Euro</option>
-                                <option value="GBP">Funt brytyjski</option>
-                                <option value="USD">Dolar amerykański</option>
-                                <option value="KRW">Won koreański</option>
+                                {currencies.map((currency => (
+                                    <option
+                                        key={currency.id}
+                                        value={currency.id}>
+                                        {currency.name}
+                                    </option>
+                                )))}
                             </select>
                         </label>
                     </p>
@@ -67,11 +54,9 @@ const Form = () => {
                     </p>
                 </fieldset>
             </form>
-            <p>
-                <span className="form__result" hidden={result === ""}>
-                    {amount} PLN = <span className="form__result--value">{(+result).toFixed(2)} {currency}</span>
-                </span>
-            </p>
+            <Result
+                result={result}
+            />
         </>
     )
 }

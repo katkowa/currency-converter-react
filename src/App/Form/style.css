@@ -42,12 +42,3 @@
 .form__button:active {
     background-color: hsl(180, 15%, 66%);
 }
-
-.form__result {
-    font-size: 20px;
-}
-
-.form__result--value {
-    color: darkcyan;
-    font-weight: bold;
-}

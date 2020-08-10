@@ -1,0 +1,9 @@
+
+.form__result {
+    font-size: 20px;
+}
+
+.form__result--value {
+    color: darkcyan;
+    font-weight: bold;
+}
