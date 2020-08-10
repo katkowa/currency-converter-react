@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import Container from "./Container";
-import Form from "./Form";
+import Form from "./App/Form";
 
 function App() {
   return (
     <div className="App">
-      <Container>
         <Form></Form>
-      </Container>
     </div>
   );
 }
