@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { currencies } from "../currencies";
 import Result from "./Result";
 import Clock from "./Clock";
-import "./style.css";
+import { Wrapper, Legend, Label, Field, Button } from "./styled";
 
-const Form = ({result, calculateResult}) => {
+const Form = ({ result, calculateResult }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].id);
 
@@ -17,15 +17,14 @@ const Form = ({result, calculateResult}) => {
         <>
             <Clock />
             <form onSubmit={onFormSubmit}>
-                <fieldset className="form">
-                    <legend className="form__legend">Przelicznik walut</legend>
+                <Wrapper>
+                    <Legend>Przelicznik walut</Legend>
                     <p>
                         <label>
-                            <span className="form__label">Kwota w zł*</span>
-                            <input
+                            <Label>Kwota w zł*</Label>
+                            <Field
                                 value={amount}
                                 onChange={({ target }) => setAmount(target.value)}
-                                className="form__field"
                                 placeholder="Wpisz kwotę w złotówkach"
                                 type="number"
                                 step="0.01"
@@ -35,11 +34,10 @@ const Form = ({result, calculateResult}) => {
                     </p>
                     <p>
                         <label>
-                            <span className="form__label">Waluta</span>
-                            <select
+                            <Label>Waluta</Label>
+                            <Field as="select"
                                 value={currency}
                                 onChange={({ target }) => setCurrency(target.value)}
-                                className="form__field"
                             >
                                 {currencies.map((currency => (
                                     <option
@@ -48,13 +46,13 @@ const Form = ({result, calculateResult}) => {
                                         {currency.name}
                                     </option>
                                 )))}
-                            </select>
+                            </Field>
                         </label>
                     </p>
                     <p>
-                        <button className="form__button">Oblicz</button>
+                        <Button>Oblicz</Button>
                     </p>
-                </fieldset>
+                </Wrapper>
             </form>
             <Result
                 result={result}

@@ -1,30 +1,32 @@
-.form {
+import styled from "styled-components";
+
+export const Wrapper = styled.fieldset`
     margin: 20px;
     border-radius: 5px;
     border: 2px solid #ccc;
-}
+`;
 
-.form__legend {
+export const Legend = styled.legend`
     font-size: 30px;
     color: darkcyan;
-}
+`;
 
-.form__label {
+export const Label = styled.span`
     width: 100%;
     display: inline-block;
     width: 250px;
     text-align: left;
-}
+`;
 
-.form__field {
+export const Field = styled.input`
     width: 100%;
     max-width: 300px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
+`;
 
-.form__button {
+export const Button = styled.button`
     width: 100%;
     padding: 10px;
     background-color: hsl(180, 15%, 56%);
@@ -33,12 +35,12 @@
     color: #fff;
     font-weight: bold;
     letter-spacing: 5px;
-}
 
-.form__button:hover {
-    background-color: hsl(180, 15%, 46%);
-}
+    &:hover {
+        background-color: hsl(180, 15%, 46%);
+    }
 
-.form__button:active {
-    background-color: hsl(180, 15%, 66%);
-}
+    &:active {
+        background-color: hsl(180, 15%, 66%);
+    }
+`;
