@@ -1,7 +1,7 @@
 # Currency Converter
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
-[Show in the browser](https://katkowa.github.io/currency-converter-react//)
+[Show in the browser](https://katkowa.github.io/currency-converter-react/)
 ## How to use it
 1. Enter amount of money you want to exchange
 2. Choose one of the available currency
