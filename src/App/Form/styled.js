@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const Wrapper = styled.fieldset`
     margin: 20px;
     border-radius: 5px;
-    border: 2px solid #ccc;
+    border: 2px solid ${({ theme }) => theme.color.silver};
 `;
 
 export const Legend = styled.legend`
     font-size: 30px;
-    color: darkcyan;
+    color: ${({ theme }) => theme.color.darkcyan};
 `;
 
 export const Label = styled.span`
@@ -23,24 +23,24 @@ export const Field = styled.input`
     max-width: 300px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid ${({ theme }) => theme.color.silver};
 `;
 
 export const Button = styled.button`
     width: 100%;
     padding: 10px;
-    background-color: hsl(180, 15%, 56%);
+    background-color: ${({ theme }) => theme.color.grannysmith};
     border-radius: 5px;
-    border: 1px solid #ccc;
-    color: #fff;
+    border: 1px solid ${({ theme }) => theme.color.silver};
+    color: ${({ theme }) => theme.color.white};
     font-weight: bold;
     letter-spacing: 5px;
 
     &:hover {
-        background-color: hsl(180, 15%, 46%);
+        background-color: ${({ theme }) => theme.color.juniper};
     }
 
     &:active {
-        background-color: hsl(180, 15%, 66%);
+        background-color: ${({ theme }) => theme.color.towergray};
     }
 `;

@@ -5,6 +5,6 @@ export const Wrapper = styled.span`
 `;
 
 export const Value = styled.span`
-    color: darkcyan;
+    color: ${({ theme }) => theme.color.darkcyan};
     font-weight: bold;
 `;
