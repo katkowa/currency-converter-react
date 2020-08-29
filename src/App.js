@@ -5,13 +5,13 @@ import Result from "./App/Result";
 import { useConverter } from './useConverter';
 
 function App() {
-  const { result, calculateResult, currencies } = useConverter();
+  const { result, calculateResult, data } = useConverter();
 
   return (
     <div className="App">
       <Clock />
       <Form
-        data={currencies}
+        data={data}
         result={result}
         calculateResult={calculateResult}
       />
