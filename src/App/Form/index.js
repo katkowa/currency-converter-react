@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Message, Fieldset, Legend, Label, Field, Button } from "./styled";
 
-const Form = ({ result, calculateResult }) => {
+const Form = ({ data, calculateResult }) => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState(currencies[0].id);
+    const [currency, setCurrency] = useState(Object.keys(currencies)[0]);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(amount, currency);
     }
 
+    if (data === undefined) {
+        return (
+            <Message>
+                Proszę czekać, ładujemy dane!
+            </Message>
+        );
+    }
     return (
         <>
             <form onSubmit={onFormSubmit}>
@@ -36,11 +43,11 @@ const Form = ({ result, calculateResult }) => {
                                 value={currency}
                                 onChange={({ target }) => setCurrency(target.value)}
                             >
-                                {currencies.map((currency => (
+                                {Object.keys(data.rates).map((currency => (
                                     <option
-                                        key={currency.id}
-                                        value={currency.id}>
-                                        {currency.name}
+                                        key={currency}
+                                        value={currency}>
+                                        {currencies[currency] ? currencies[currency] : currency}
                                     </option>
                                 )))}
                             </Field>

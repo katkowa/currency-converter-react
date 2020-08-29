@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.fieldset`
+export const Message = styled.div`
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 5px;
+    border: 2px solid ${({ theme }) => theme.color.silver};
+`;
+
+export const Fieldset = styled.fieldset`
     margin: 20px;
     border-radius: 5px;
     border: 2px solid ${({ theme }) => theme.color.silver};
