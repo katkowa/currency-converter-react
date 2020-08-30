@@ -1,7 +1,15 @@
 # Currency Converter
+Very simple currency converter. Rates are taken from public api: https://exchangeratesapi.io/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
 [Show in the browser](https://katkowa.github.io/currency-converter-react/)
+## Technologies
+- React.js
+- Styled Components
+- Custom Hooks
+- Axios
+- CSS
+- HTML
 ## How to use it
 1. Enter amount of money you want to exchange
 2. Choose one of the available currency
