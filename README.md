@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Click "calculate" button
 4. Enjoy the result!
 
-![Converter visualization](https://i.ibb.co/tHgRpVr/Przechwytywanie.png)
+![Converter visualization](https://i.ibb.co/cy0qh4n/Przechwytywanie.png)
 
 ## Available Scripts
 
