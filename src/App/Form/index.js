@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
-import { Message, Fieldset, Legend, Label, Field, Button } from "./styled";
+import { Message, Fieldset, Legend, Label, Field, Button, Line } from "./styled";
 
-const Form = ({ data, calculateResult }) => {
+const Form = ({ data, error, calculateResult }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(Object.keys(currencies)[0]);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(amount, currency);
+    }
+
+    if (error !== undefined) {
+        return (
+            <Message>
+                <Line>Upsii, coś poszło nie tak 🙊</Line>
+                <Line>Sprawdź połączenie z internetem lub spróbuj ponownie później.</Line>
+                <Line>Przepraszamy za niedogodności i liczymy na wyrozumiałość! ❤</Line>
+            </Message>
+        );
     }
 
     if (data === undefined) {

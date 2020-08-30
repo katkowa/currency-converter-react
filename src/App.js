@@ -6,14 +6,14 @@ import Info from "./App/Info";
 import { useConverter } from './useConverter';
 
 function App() {
-  const { result, calculateResult, data } = useConverter();
+  const { result, calculateResult, data, error } = useConverter();
 
   return (
     <div className="App">
       <Clock />
       <Form
         data={data}
-        result={result}
+        error={error}
         calculateResult={calculateResult}
       />
       <Info data={data} />

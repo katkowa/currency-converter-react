@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { useAxios } from "./useAxios";
 
 export const useConverter = () => {
+    const url = "https://api.exchangeratesapi.io/latest?base=PLN";
     const [result, setResult] = useState();
     const [data, setData] = useState();
-
-    const handleError = error => {
-        console.error(error);
-    }
+    const [error, setError] = useState();
 
     const calculateResult = (amount, currency) => {
         const rate = data.rates[currency];
@@ -19,11 +17,12 @@ export const useConverter = () => {
         });
     }
 
-    useAxios("https://api.exchangeratesapi.io/latest?base=PLN", setData, handleError);
+    useAxios(url, setData, error => setError(error.message));
 
     return {
         result,
         calculateResult,
-        data
+        data,
+        error,
     }
 }

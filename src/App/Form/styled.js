@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Message = styled.div`
     height: 250px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     margin: 20px;
     border-radius: 5px;
     border: 2px solid ${({ theme }) => theme.color.silver};
@@ -53,4 +54,8 @@ export const Button = styled.button`
     &:active {
         background-color: ${({ theme }) => theme.color.towergray};
     }
+`;
+
+export const Line = styled.span`
+    flex: 0 0 100%;
 `;
