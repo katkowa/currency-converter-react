@@ -1,5 +1,5 @@
 # Currency Converter
-Very simple currency converter. Rates are taken from public api: https://exchangeratesapi.io/
+Very simple currency converter. Rates are taken from public api: https://exchangeratesapi.io/  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
 [Show in the browser](https://katkowa.github.io/currency-converter-react/)
@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Click "calculate" button
 4. Enjoy the result!
 
-![Converter visualization](https://i.ibb.co/r0KPyqX/demo.png)
+![Converter visualization](https://i.ibb.co/tHgRpVr/Przechwytywanie.png)
 
 ## Available Scripts
 
